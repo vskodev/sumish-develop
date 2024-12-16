@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+         testdox="true"
+         backupGlobals="true"
+         displayDetailsOnIncompleteTests="true"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.5/phpunit.xsd">
+  <testsuites>
+    <testsuite name="Default">
+      <directory>tests</directory>
+    </testsuite>
+  </testsuites>
+  <coverage>
+    <report>
+      <text outputFile="php://stdout"/>
+      <html outputDirectory="../docs/coverage"/>
+    </report>
+  </coverage>
+  <source>
+    <include>
+      <!-- <directory suffix=".php">../sumish-framework/src</directory> -->
+      <file>../sumish-framework/src/Application.php</file>
+      <file>../sumish-framework/src/Container.php</file>
+      <file>../sumish-framework/src/Controller.php</file>
+      <file>../sumish-framework/src/Loader.php</file>
+      <file>../sumish-framework/src/Request.php</file>
+      <file>../sumish-framework/src/Response.php</file>
+      <file>../sumish-framework/src/Router.php</file>
+      <file>../sumish-framework/src/Session.php</file>
+      <file>../sumish-framework/src/View.php</file>
+    </include>
+  </source>
+</phpunit>
